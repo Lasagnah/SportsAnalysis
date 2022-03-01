@@ -33,3 +33,7 @@ scoreMatrix=np.array(
     [1], #Round 10
     [3] #Tiebreaker
     )
+aTranspose=np.transpose(gameMatrix)
+#The formula which we will be using will be A'Ax=A'b, where A'A is a matrix M, and A'b is a matrix D.
+D = np.multiply(aTranspose, scoreMatrix)
+M = np.multiply(aTranspose, gameMatrix)
